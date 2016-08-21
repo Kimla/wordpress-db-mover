@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Wordpress db mover</title>
+        <style media="screen">
+            input {
+                display: block;
+                width: 400px;
+                margin: 15px 0;
+                padding: 10px 14px;
+                font-size: 16px;
+                max-width: 100%;
+            }
+            button {
+                background: #4db6ac;
+                border: 0;
+                box-shadow: 0;
+                outline: 0;
+                padding: 20px 50px;
+                text-transform: uppercase;
+                color: #fff;
+                cursor: pointer;
+            }
+            #result {
+                padding: 30px;
+            }
+            pre {
+                white-space: pre-wrap;
+                background: #f3f3f7;
+                border: 1px solid #dedee3;
+                padding: 20px;
+                line-height: 140%;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="inputs">
+            <input id="old-url" type="text" name="old-url" placeholder="http://www.oldurl">
+
+            <input id="new-url" type="text" name="new-url" placeholder="http://www.newurl">
+
+            <input id="table-prefix" type="text" name="table-prefix" placeholder="wp_">
+
+            <button id="generate" type="button" name="button">Generate</button>
+        </div>
+
+        <div id="result"></div>
+
+        <script src="script.js" charset="utf-8"></script>
+    </body>
+</html>
