@@ -1,9 +1,9 @@
 document.getElementById("generate").addEventListener("click", createSqlCode);
 
 function createSqlCode() {
-    var oldUrl = document.getElementById("old-url").value;
-    var newUrl = document.getElementById("new-url").value;
-    var tablePrefix = document.getElementById("table-prefix").value;
+    var oldUrl = getValueWithoutWhiteSpace(document.getElementById("old-url"));
+    var newUrl = getValueWithoutWhiteSpace(document.getElementById("new-url"));
+    var tablePrefix = getValueWithoutWhiteSpace(document.getElementById("table-prefix"));
     var resultContainer = document.getElementById("result");
 
     var sqlCode =
@@ -15,5 +15,9 @@ function createSqlCode() {
     "</pre>";
 
     resultContainer.innerHTML = sqlCode;
+}
 
+function getValueWithoutWhiteSpace(el) {
+    el.value = el.value.replace(/\s/g,'');
+    return el.value;
 }
